@@ -18,9 +18,6 @@ module.exports = {
     assetModuleFilename: './assets/[name][ext]',
     clean: true,
   },
-  //   optimization: {
-  //     runtimeChunk: 'single',
-  //   },
   module: {
     rules: [
       {
