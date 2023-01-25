@@ -24,7 +24,7 @@ tasks.forEach((task, index) => {
   listBox.innerHTML += `
                     <li id='task-line'>
                       <input id='checkbox' type="checkbox" onchange="toggleCompleted()">
-                      <span id='task-desk'>${index+1}.  ${task.description}</span>
+                      <span id='task-desk'>${index + 1}.  ${task.description}</span>
                       <img id='more-btn' src="${moreBtn}" alt="more-btn">
                     </li>`;
 });
