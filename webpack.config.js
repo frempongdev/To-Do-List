@@ -9,17 +9,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html',
+      template: './src/index.html',
     }),
   ],
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: './assets/[name][ext]',
     clean: true,
   },
-//   optimization: {
-//     runtimeChunk: 'single',
-//   },
+  //   optimization: {
+  //     runtimeChunk: 'single',
+  //   },
   module: {
     rules: [
       {
@@ -33,6 +34,14 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+        ],
       },
     ],
   },

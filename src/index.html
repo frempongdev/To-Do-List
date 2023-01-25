@@ -6,6 +6,28 @@
     <title>To-Do-List</title>
 </head>
 <body>
-    <h1>To-Do-List</h1>
+    <section class="to-do-section">
+        <div class="to-do-container">
+            <div class="top">
+                <h1 class="heading">Today's To Do</h1>
+                <button class="sync-btn"><img src="assets/sync.png" alt="sync-img" class="sync-img"></button>
+            </div>
+
+            <div class="form-div">
+                <form action="submit" class="task-form">
+                    <input type="text" id="task-input-field" placeholder="Add to your list...">
+                    <input type="submit" id="hidden-task-submit">
+                </form>
+            </div>
+
+            <div class="task-display">
+                <ul class="task-list">
+                    <!-- Javascript Dynamic DOM HERE ---------->
+                </ul>
+            </div>
+            
+            <button class="clear-all">Clear All Completed</button>
+        </div>
+    </section>
 </body>
 </html>

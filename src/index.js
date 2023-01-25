@@ -1,25 +1,30 @@
-import _ from 'lodash';
 import './style.css';
-import Logo from './assets/event1.png'
+import moreBtn from './assets/more.png';
 
-function component() {
-  //   const element = document.createElement('div');
-  
-  //   // Lodash, now imported by this script
-  //   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  //   element.classList.add('hello');
+const tasks = [
+  {
+    description: 'Read a Book',
+    completed: false,
+    index: 0,
+  },
+  {
+    description: 'Cook',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Wash Dishes',
+    completed: false,
+    index: 2,
+  },
+];
 
-  //     // Add the image to our existing div.
-  // const myLogo = new Image();
-  // myLogo.src = Logo;
-
-  // element.appendChild(myLogo);
-  
-  //   return element;
-
-  
-  }
-  
-  document.body.appendChild(component());
-
- 
+const listBox = document.querySelector('.task-list');
+tasks.forEach((task, index) => {
+  listBox.innerHTML += `
+                    <li id='task-line'>
+                      <input id='checkbox' type="checkbox" onchange="toggleCompleted()">
+                      <span id='task-desk'>${index+1}.  ${task.description}</span>
+                      <img id='more-btn' src="${moreBtn}" alt="more-btn">
+                    </li>`;
+});
