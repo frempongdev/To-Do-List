@@ -7,7 +7,7 @@ export const addTask = () => {
     
     form.addEventListener('submit', (e)=>{
         e.preventDefault();
-        tasks.push({description: taskInput.value, completed: false, index: tasks.length + 1});
+        tasks.push({description: taskInput.value, completed: false, index: tasks.length});
         form.reset();
         localStorage.setItem('tasks', JSON.stringify(tasks));
         displayDom();

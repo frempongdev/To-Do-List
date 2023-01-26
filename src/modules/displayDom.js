@@ -10,10 +10,9 @@ export const displayDom = () =>{
         listBox.innerHTML += `
         <li class='task-line'>
             <input class='checkbox' type="checkbox" onchange="toggleCompleted()">
-            <input class='task-desc' type="text" value="${task.index}.  ${task.description}" readonly>
-            <img class='delete-btn' src="${deleteBtn}" alt="delete-btn">
+            <input class='task-desc' type="text" value="${task.description}" readonly>
+            <img class='delete-btn hide' src="${deleteBtn}" alt="delete-btn">
             <img class='more-btn' src="${moreBtn}" alt="delete-btn">
         </li>`;
     })
-    
 }
