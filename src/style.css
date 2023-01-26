@@ -40,6 +40,7 @@ h1 {
 
 #task-input-field {
   border: none;
+  outline: none;
   width: 80%;
   padding: 1%;
 }
@@ -70,12 +71,14 @@ h1 {
   border-bottom: 1px gray solid;
 }
 
-#checkbox {
-  margin-right: 2%;
+#task-desk {
+  border: none;
+  outline: none;
+  width: 90%;
 }
 
-.task-list li span {
-  width: 90%;
+#checkbox {
+  margin-right: 2%;
 }
 
 #more-btn {
