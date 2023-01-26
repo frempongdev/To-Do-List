@@ -1,3 +1,5 @@
+import { editTask } from "./editTask";
+import { deleteTask } from "./deleteTask";
 import { tasks } from "../index";
 import moreBtn from '../assets/more.png';
 import deleteBtn from '../assets/delete.png';
@@ -15,4 +17,7 @@ export const displayDom = () =>{
             <img class='more-btn' src="${moreBtn}" alt="delete-btn">
         </li>`;
     })
+
+    editTask();
+    deleteTask();
 }

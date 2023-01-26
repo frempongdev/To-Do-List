@@ -1,14 +1,23 @@
 
+import { tasks } from "..";
+import { displayDom } from "./displayDom";
 export const deleteTask = () =>{
-    const moreBtn = document.querySelectorAll('.more-btn');
-    // const deleteBtn = document.querySelectorAll('.delete-btn');
+    
+const deleteBtn = document.querySelectorAll('.delete-btn');
 
-    moreBtn.forEach((btn)=>{
+    deleteBtn.forEach((btn, index)=>{
         btn.addEventListener('click', ()=>{
-            btn.classList.toggle('hide');
-            const deleteBtn = btn.parentElement.querySelector('.delete-btn');
-            console.log(deleteBtn)
-            deleteBtn.classList.remove('hide');
+            console.log(tasks[index])
+            tasks.splice(index, 1);
+
+            tasks.forEach((task,index)=>{
+                task.index = index;
+            })
+
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            displayDom();
+
+
         })
     })
 }

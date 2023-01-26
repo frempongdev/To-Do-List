@@ -1,25 +1,50 @@
 import { tasks } from "..";
 import { displayDom } from "./displayDom";
+
 export const editTask = () =>{
     const taskDescLines = document.querySelectorAll('.task-desc');
     
     taskDescLines.forEach((taskDesc, index) => {
+        const moreBtn = taskDesc.parentElement.querySelector('.more-btn');
+        const deleteBtn = taskDesc.parentElement.querySelector('.delete-btn');
         taskDesc.addEventListener('click', () =>{
-            alert('hi')
             taskDesc.toggleAttribute('readonly');
+
+            moreBtn.classList.add('hide');
+            deleteBtn.classList.remove('hide');
+
+
             // taskDesc.style.outline = 'auto';
             taskDesc.addEventListener('blur', () =>{
                 taskDesc.style.outline = 'none';
                 tasks[index].description = taskDesc.value;
                 localStorage.setItem('tasks', JSON.stringify(tasks));
+                setTimeout(() => {
+                    moreBtn.classList.remove('hide');
+                }, 500);
+                setTimeout(() => {
+                    deleteBtn.classList.add('hide');
+                }, 500);
 
+            });
 
-                
-                // const taskIndex = taskDesc.value.split(".")[0];
-                // tasks[taskIndex].description = taskDesc.value.slice(1);
-                // localStorage.setItem("tasks", JSON.stringify(tasks));
-                // displayDom();
-                
+            taskDesc.addEventListener('input', () =>{
+                taskDesc.style.outline = 'none';
+                tasks[index].description = taskDesc.value;
+                localStorage.setItem('tasks', JSON.stringify(tasks));
+                setTimeout(() => {
+                    moreBtn.classList.remove('hide');
+                }, 500);
+                setTimeout(() => {
+                    deleteBtn.classList.add('hide');
+                }, 500);
+
+            });
+
+            taskDesc.addEventListener('keyup', (event) => {
+                if (event.keyCode === 13 || event.which === 13) {
+                    taskDesc.toggleAttribute('readonly');
+                }
             });
 
             

@@ -1,6 +1,7 @@
 body {
   background-color: white;
   margin: 15% 20%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .to-do-section {
@@ -20,7 +21,6 @@ h1 {
 }
 
 .sync-btn {
-  /* width: 80%; */
   border: none;
   background: none;
   padding: 0%;
@@ -39,6 +39,8 @@ h1 {
 }
 
 #task-input-field {
+  font-size: 1rem;
+  font-style: italic;
   border: none;
   outline: none;
   width: 80%;
@@ -47,6 +49,7 @@ h1 {
 
 ::placeholder {
   font-style: italic;
+  font-size: 1rem;
 }
 
 #hidden-task-submit {
@@ -72,7 +75,7 @@ h1 {
 }
 
 .task-desc {
-  font-size: 1.0rem;
+  font-size: 1.5rem;
   border: none;
   outline: none;
   width: 90%;
@@ -94,6 +97,7 @@ h1 {
 }
 
 .clear-all {
+  font-size: 1.2rem;
   padding: 3%;
   width: 100%;
 }
