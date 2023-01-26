@@ -64,24 +64,31 @@ h1 {
   padding: 0%;
 }
 
-#task-line {
+.task-line {
   display: flex;
   justify-content: start;
   align-items: center;
   border-bottom: 1px gray solid;
 }
 
-#task-desk {
+.task-desc {
   border: none;
   outline: none;
   width: 90%;
+  padding: 1%;
 }
 
-#checkbox {
+.checkbox {
   margin-right: 2%;
 }
 
-#more-btn {
+.more-btn {
+  width: 5%;
+  margin: 3% 0%;
+}
+
+.delete-btn {
+  display: none;
   width: 5%;
   margin: 3% 0%;
 }
@@ -89,4 +96,9 @@ h1 {
 .clear-all {
   padding: 3%;
   width: 100%;
+}
+
+.hide {
+  display: unset;
+  display: none;
 }

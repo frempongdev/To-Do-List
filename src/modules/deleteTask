@@ -1,0 +1,14 @@
+
+export const deleteTask = () =>{
+    const moreBtn = document.querySelectorAll('.more-btn');
+    const deleteBtn = document.querySelectorAll('.delete-btn');
+
+    moreBtn.forEach((btn)=>{
+        btn.addEventListener('click', ()=>{
+            btn.classList.toggle('hide');
+            btn.parentElement.childNodes.find(node => node.classList.contains('delete-btn')).style.display ='flex';
+
+
+        })
+    })
+}

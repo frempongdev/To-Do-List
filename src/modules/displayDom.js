@@ -1,16 +1,18 @@
 import { tasks } from "../index";
 import moreBtn from '../assets/more.png';
-const allTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+import deleteBtn from '../assets/delete.png';
+
 
 export const displayDom = () =>{
-
     const listBox = document.querySelector('.task-list');
-    allTasks.forEach((task, index) => {
+    listBox.innerHTML = '';
+    tasks.forEach((task, index) => {
         listBox.innerHTML += `
-        <li id='task-line'>
-        <input id='checkbox' type="checkbox" onchange="toggleCompleted()">
-        <input id='task-desk' type="text" value="${task.index}.  ${task.description}" readonly>
-        <img id='more-btn' src="${moreBtn}" alt="more-btn">
+        <li class='task-line'>
+            <input class='checkbox' type="checkbox" onchange="toggleCompleted()">
+            <input class='task-desc' type="text" value="${task.index}.  ${task.description}" readonly>
+            <img class='delete-btn' src="${deleteBtn}" alt="delete-btn">
+            <img class='more-btn' src="${moreBtn}" alt="delete-btn">
         </li>`;
     })
     
