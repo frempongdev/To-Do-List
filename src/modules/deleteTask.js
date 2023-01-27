@@ -7,7 +7,7 @@ const deleteTask = () => {
       tasks.splice(index, 1);
 
       tasks.forEach((task, index) => {
-        task.index = index;
+        task.index = index + 1;
       });
 
       localStorage.setItem('tasks', JSON.stringify(tasks));
