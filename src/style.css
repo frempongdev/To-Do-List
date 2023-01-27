@@ -1,6 +1,7 @@
 body {
   background-color: white;
   margin: 15% 20%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .to-do-section {
@@ -20,7 +21,6 @@ h1 {
 }
 
 .sync-btn {
-  /* width: 80%; */
   border: none;
   background: none;
   padding: 0%;
@@ -39,13 +39,17 @@ h1 {
 }
 
 #task-input-field {
+  font-size: 1rem;
+  font-style: italic;
   border: none;
+  outline: none;
   width: 80%;
   padding: 1%;
 }
 
 ::placeholder {
   font-style: italic;
+  font-size: 1rem;
 }
 
 #hidden-task-submit {
@@ -63,27 +67,47 @@ h1 {
   padding: 0%;
 }
 
-#task-line {
+.task-line {
   display: flex;
   justify-content: start;
   align-items: center;
   border-bottom: 1px gray solid;
 }
 
-#checkbox {
+.task-desc {
+  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  width: 90%;
+  padding: 1%;
+}
+
+.checkbox {
   margin-right: 2%;
 }
 
-.task-list li span {
-  width: 90%;
+.more-btn {
+  width: 5%;
+  margin: 3% 0%;
 }
 
-#more-btn {
+.delete-btn {
   width: 5%;
   margin: 3% 0%;
 }
 
 .clear-all {
+  font-size: 1.2rem;
   padding: 3%;
   width: 100%;
+}
+
+.hide {
+  display: unset;
+  display: none;
+}
+
+.show {
+  display: unset;
+  display: block;
 }
