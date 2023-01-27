@@ -1,8 +1,20 @@
+/* eslint-disable no-restricted-globals */
+
 const clearBtn = document.querySelector('.clear-all');
 
-clearBtn.addEventListener('click', () => {
-  localStorage.clear();
-  window.location.reload();
-});
+const clearCompleted = () => {
+  const grab = JSON.parse(localStorage.getItem('tasks')) || [];
 
-export default clearBtn;
+  clearBtn.addEventListener('click', () => {
+    const tasks = grab.filter((tsk) => tsk.completed === false);
+
+    tasks.forEach((task, index) => {
+      task.index = index + 1;
+    });
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    location.reload();
+  });
+};
+
+export default clearCompleted;
