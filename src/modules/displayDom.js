@@ -1,7 +1,8 @@
+/* eslint-disable*/
 import editTask from './editTask.js';
-import deleteTask from './deleteTask.js'; // eslint-disable-line
+import deleteTask from './deleteTask.js';
 import status from './status.js';
-import clearCompleted from './clearAll.js';
+import clearCompleted from './clearAll.js'; // eslint-disable-line
 import moreBtn from '../assets/more.png';
 import deleteBtn from '../assets/delete.png';
 
@@ -24,8 +25,6 @@ const displayDom = () => {
   deleteTask();
   status();
   clearCompleted();
-
-
 };
 
 export default displayDom;
