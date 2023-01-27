@@ -1,18 +1,14 @@
-import { addTask } from './modules/add-task';
-import { displayDom } from './modules/displayDom';
-import { clearBtn } from './modules/clearAll';
-import { editTask } from './modules/editTask';
-import { deleteTask } from './modules/deleteTask';
+import addTask from './modules/add-task.js';
+import displayDom from './modules/displayDom.js';
+import editTask from './modules/editTask.js';
+import deleteTask from './modules/deleteTask.js';
 import './style.css';
-// import moreBtn from './assets/more.png';
 
-export const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 displayDom(); // Displays DOM
 addTask(); // Ads tasks to Local Storage
 editTask(); // Edit individual task
 deleteTask(); // delete individual task
-// clearAll()
 
-
-// console.log(editTask)
+export default tasks;

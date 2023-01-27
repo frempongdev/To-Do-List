@@ -1,6 +1,8 @@
-export const clearBtn = document.querySelector('.clear-all');
+const clearBtn = document.querySelector('.clear-all');
 
-clearBtn.addEventListener('click', () =>{
-    localStorage.clear();
-    window.location.reload();
-})
+clearBtn.addEventListener('click', () => {
+  localStorage.clear();
+  window.location.reload();
+});
+
+export default clearBtn;

@@ -1,23 +1,25 @@
-import { editTask } from "./editTask";
-import { deleteTask } from "./deleteTask";
-import { tasks } from "../index";
+import editTask from './editTask.js';
+import deleteTask from './deleteTask.js'; // eslint-disable-line
 import moreBtn from '../assets/more.png';
 import deleteBtn from '../assets/delete.png';
 
+const displayDom = () => {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  const listBox = document.querySelector('.task-list');
 
-export const displayDom = () =>{
-    const listBox = document.querySelector('.task-list');
-    listBox.innerHTML = '';
-    tasks.forEach((task, index) => {
-        listBox.innerHTML += `
+  listBox.innerHTML = '';
+  tasks.forEach((task) => {
+    listBox.innerHTML += `
         <li class='task-line'>
             <input class='checkbox' type="checkbox" onchange="toggleCompleted()">
             <input class='task-desc' type="text" value="${task.description}" readonly>
             <img class='delete-btn hide' src="${deleteBtn}" alt="delete-btn">
             <img class='more-btn' src="${moreBtn}" alt="delete-btn">
         </li>`;
-    })
+  });
 
-    editTask();
-    deleteTask();
-}
+  editTask();
+  deleteTask();
+};
+
+export default displayDom;
