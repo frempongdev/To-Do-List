@@ -111,3 +111,7 @@ h1 {
   display: unset;
   display: block;
 }
+
+.cross {
+text-decoration: line-through;
+}

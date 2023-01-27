@@ -1,8 +1,27 @@
+import displayDom from "./displayDom";
+
 const clearBtn = document.querySelector('.clear-all');
 
-clearBtn.addEventListener('click', () => {
-  localStorage.clear();
-  window.location.reload();
-});
+const clearCompleted = () => {
+  const grab = JSON.parse(localStorage.getItem('tasks')) || [];
 
-export default clearBtn;
+  
+  clearBtn.addEventListener('click', () => {
+
+       let tasks = grab.filter(tsk => tsk.completed === false);
+
+       tasks.forEach((task, index) => {
+         task.index = index + 1;
+       });
+
+       localStorage.setItem('tasks', JSON.stringify(tasks));
+        location.reload();
+
+
+        console.log(tasks)
+        
+
+      });
+}
+
+export default clearCompleted;

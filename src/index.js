@@ -1,5 +1,7 @@
 import addTask from './modules/add-task.js';
 import displayDom from './modules/displayDom.js';
+import status from './modules/status.js';
+import clearCompleted from './modules/clearAll.js';
 import './style.css';
 
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
