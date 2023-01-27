@@ -1,8 +1,7 @@
 import displayDom from './displayDom.js';
 
-const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
 const addTask = () => {
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   const form = document.querySelector('.task-form');
   const taskInput = document.getElementById('task-input-field');
 

@@ -1,5 +1,3 @@
-import displayDom from './displayDom.js';  // eslint-disable-line
-
 const deleteTask = () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   const deleteBtn = document.querySelectorAll('.delete-btn');
@@ -13,7 +11,7 @@ const deleteTask = () => {
       });
 
       localStorage.setItem('tasks', JSON.stringify(tasks));
-      displayDom();
+      location.reload(); // eslint-disable-line
     });
   });
 };
