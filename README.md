@@ -33,8 +33,8 @@
 <br>
 
 <!-- DEPLOYMENT -->
-### This project goes live [here](https://frempongdev.github.io/To-Do-List/) 🚀 .
-If link does not work copy URL ( https://frempongdev.github.io/To-Do-List/ )
+### This project goes live [here](https://frempongdev.github.io/To-Do-List/dist/) 🚀 .
+If link does not work copy URL ( https://frempongdev.github.io/To-Do-List/dist/ )
 
 <br>
 
