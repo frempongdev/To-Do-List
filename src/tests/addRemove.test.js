@@ -29,3 +29,26 @@ describe('addTask', () => {
     expect(displayDom).toHaveBeenCalled();
   });
 });
+
+describe('deleteTask', () => {
+  it('deletes a task from local storage', () => {
+    const tasks = [{ description: 'Test Task 1', completed: false, index: 1 }, { description: 'Test Task 2', completed: false, index: 2 }];
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    const deleteBtn1 = document.createElement('button');
+    deleteBtn1.classList.add('delete-btn');
+    document.body.appendChild(deleteBtn1);
+
+    const deleteBtn2 = document.createElement('button');
+    deleteBtn2.classList.add('delete-btn');
+    document.body.appendChild(deleteBtn2);
+
+    deleteTask();
+
+    const clickEvent1 = new Event('click');
+    deleteBtn1.dispatchEvent(clickEvent1);
+
+    const updatedTasks = JSON.parse(localStorage.getItem('tasks'));
+    expect(updatedTasks).toHaveLength(1);
+  });
+});
