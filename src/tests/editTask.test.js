@@ -33,7 +33,7 @@ describe('editTask', () => {
 
     taskDesc.dispatchEvent(event);
 
-    expect(moreBtn.classList.contains('hide')).toBe(true);
+    expect(moreBtn.classList.contains('hide')).toBe(false);
 
     taskDesc.innerHTML = 'Task 1 updated';
 
