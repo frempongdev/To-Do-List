@@ -9,8 +9,6 @@ const editTask = () => {
 
     taskDesc.addEventListener('click', () => {
       taskDesc.removeAttribute('readonly');
-
-      moreBtn.classList.add('hide');
       deleteBtn.classList.remove('hide');
 
       taskDesc.addEventListener('blur', () => {
