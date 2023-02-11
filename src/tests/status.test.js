@@ -29,23 +29,10 @@ describe('status', () => {
 
   test('should display the correct status of the tasks', () => {
     const checkboxes = document.querySelectorAll('.checkbox');
-    // const taskDescs = document.querySelectorAll('.task-desc');
+
     expect(checkboxes[0].checked).toBe(false);
     expect(checkboxes[1].checked).toBe(true);
-    // expect(taskDescs[0].classList.contains('cross')).toBe(false);
-    // expect(taskDescs[1].classList.contains('cross')).toBe(true);
   });
-
-  //   test('should update local storage and display when checkbox is clicked', () => {
-  //     // const spy = jest.spyOn(window, 'displayDom');
-  //     // status();
-  //     const checkbox = document.querySelectorAll('.checkbox');
-  //     const clickEvent = new Event('click');
-  //     checkbox[0].dispatchEvent(clickEvent);
-  //     expect(checkbox[0].checked).toBe(true);
-  //     expect(JSON.parse(localStorage.getItem('tasks'))[0].completed).toBe(true);
-  //     // expect(spy).toHaveBeenCalled();
-  //   });
 
   test('should update local storage and display checked when checkbox is clicked', () => {
     const checkbox = document.querySelectorAll('.checkbox');
