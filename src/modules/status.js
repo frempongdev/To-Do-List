@@ -1,5 +1,4 @@
 /* eslint-disable*/
-import displayDom from './displayDom.js';
 
 const status = () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -25,8 +24,6 @@ const status = () => {
         taskLine.classList.remove('cross');
         localStorage.setItem('tasks', JSON.stringify(tasks));
       }
-
-      displayDom();
     });
   });
 };

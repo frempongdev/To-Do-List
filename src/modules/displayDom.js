@@ -3,8 +3,10 @@ import editTask from './editTask.js';
 import deleteTask from './deleteTask.js';
 import status from './status.js';
 import clearCompleted from './clearAll.js'; // eslint-disable-line
-import moreBtn from '../assets/more.png';
-import deleteBtn from '../assets/delete.png';
+
+const moreBtn = require('../assets/more.png');
+const deleteBtn = require('../assets/delete.png');
+
 
 const displayDom = () => {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];

@@ -1,8 +1,7 @@
 /* eslint-disable no-restricted-globals */
 
-const clearBtn = document.querySelector('.clear-all');
-
 const clearCompleted = () => {
+  const clearBtn = document.querySelector('.clear-all');
   const grab = JSON.parse(localStorage.getItem('tasks')) || [];
 
   clearBtn.addEventListener('click', () => {
