@@ -20,7 +20,7 @@ describe('clearCompleted', () => {
     `;
   });
 
-  it('should clear completed tasks and persist remaining tasks in localStorage', () => {
+  it('should clear completed tasks and keep remaining tasks in localStorage', () => {
     clearCompleted();
     const clearBtn = document.querySelector('.clear-all');
     const clickEvent = new MouseEvent('click');

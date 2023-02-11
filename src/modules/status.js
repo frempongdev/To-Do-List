@@ -26,7 +26,7 @@ const status = () => {
         localStorage.setItem('tasks', JSON.stringify(tasks));
       }
 
-      displayDom();
+      // displayDom();
     });
   });
 };
